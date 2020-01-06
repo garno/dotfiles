@@ -147,7 +147,7 @@ export PROMPT='$(generate_prompt)'
 #
 # zsh Plugin manager
 #
-# Requirements: Requires cloning zplug into ZPLUG_HOME
+# Requirements:
 #
 #   - zplug --> https://github.com/zplug/zplug#manually
 #
@@ -161,3 +161,12 @@ source $ZPLUG_HOME/init.zsh
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug load
+
+#
+# [fzf]
+#
+# Requirements:
+#
+#   - fzf --> https://github.com/junegunn/fzf
+#
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
