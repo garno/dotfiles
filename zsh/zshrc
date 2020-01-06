@@ -1,0 +1,156 @@
+#
+# Global variables
+#
+
+# Path
+export PATH="./bin:$PATH"
+export PATH="./node_modules/.bin:$PATH"
+export PATH="$PATH:~/Dropbox/bin"
+export PATH="$PATH:/usr/local/sbin"
+export PATH="$PATH:/usr/local/bin"
+
+export TERM=xterm-256color
+
+# Locales
+export LANG="en_US.UTF-8"
+export LC_ALL=$LANG
+
+# Editor
+export EDITOR="vim"
+
+# History
+export HISTFILE=$HOME/.zhistory
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
+# Elixir history
+export ERL_AFLAGS="-kernel shell_history enabled"
+
+# Android SDK
+export ANDROID_SDK_ROOT="/Users/garno/Library/Android/sdk"
+export ANDROID_HOME="/Users/garno/Library/Android/sdk"
+
+# Java
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home/
+
+# Keyboard
+export KEYTIMEOUT=1
+
+# Colors (thanks @remi --> https://github.com/remi/dotfiles/blob/master/zsh/config/variables.zsh#L1-L13)
+autoload colors zsh/terminfo
+
+if [[ "$terminfo[colors]" -ge 8 ]]; then
+  colors
+fi
+
+for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE BLACK; do
+  eval PR_$color='%{$terminfo[bold]$fg[${(L)color}]%}'
+  eval export XPR_$color='$terminfo[bold]$fg[${(L)color}]'
+  eval PR_LIGHT_$color='%{$fg[${(L)color}]%}'
+  eval export XPR_LIGHT_$color='$fg[${(L)color}]'
+  (( count = $count + 1 ))
+done
+
+export PR_NO_COLOR="%{$terminfo[sgr0]%}"
+export XPR_NO_COLOR="$terminfo[sgr0]"
+
+#
+# Options
+#
+
+# Append command history instead of overriding it
+setopt append_history
+setopt share_history
+
+# Prevent duplicated commands in history
+setopt hist_ignore_dups
+
+# Select first result instead of listing possibilities in the command history
+setopt menu_complete
+
+# Evaluate prompt
+setopt prompt_subst
+
+#
+# Aliases
+#
+
+# General
+alias ll="ls -la"
+
+# Ruby
+alias b="bundle"
+alias be="bundle exec"
+alias rt="RAILS_ENV=test"
+
+# Git
+alias g="git"
+alias git="LANG=en_CA git"
+alias clean_branches="git branch --merged master | grep -v \"\* master\" | xargs -n 1 git branch -d"
+
+# Docker
+alias dkc="docker-compose"
+
+# nv
+alias nvd="nv .env.dev,.env.dev.local"
+alias nvt="nv .env.test,.env.test.local"
+
+# Vim
+alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+
+#
+# Prompt
+#
+
+function current_git_branch {
+  branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+
+  if [[ $branch = "" ]]; then
+    branch="none"
+  fi
+
+  echo "$PR_NO_COLOR$PR_GRAY on$PR_LIGHT_YELLOW branch$PR_LIGHT_RED@$branch"
+}
+
+function current_user_and_path {
+  echo "$PR_LIGHT_YELLOW$(whoami)$PR_LIGHT_BLUE@${PWD##*/}"
+}
+
+function generate_prompt {
+  echo "$PR_GRAY↓↓ $(current_user_and_path)$(current_git_branch)$PR_LIGHT_WHITE\n> "
+}
+
+export PROMPT='$(generate_prompt)'
+
+#
+# [zplug]
+#
+# zsh Plugin manager
+#
+# Requirements: Requires cloning zplug into ZPLUG_HOME
+#
+#   - zplug --> https://github.com/zplug/zplug#manually
+#
+# > export ZPLUG_HOME=/usr/local/opt/zplug
+# > git clone https://github.com/zplug/zplug $ZPLUG_HOME
+#
+
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug load
+
+#
+# [asdf]
+#
+# Version manager
+#
+# Requirements:
+#
+#   - asdf installed via Homebrew --> https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
+#
+
+. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
