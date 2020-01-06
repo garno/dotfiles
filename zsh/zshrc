@@ -2,7 +2,7 @@
 # Global variables
 #
 
-# Path
+## Path
 export PATH="./bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$PATH:~/Dropbox/bin"
@@ -11,33 +11,40 @@ export PATH="$PATH:/usr/local/bin"
 
 export TERM=xterm-256color
 
-# Locales
+## Locales
 export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
 
-# Editor
+## Editor
 export EDITOR="vim"
 
-# History
+## History
 export HISTFILE=$HOME/.zhistory
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
-# Elixir history
+## Elixir history
 export ERL_AFLAGS="-kernel shell_history enabled"
 
-# Android SDK
+## Android SDK
 export ANDROID_SDK_ROOT="/Users/garno/Library/Android/sdk"
 export ANDROID_HOME="/Users/garno/Library/Android/sdk"
 
-# Java
+## Java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home/
 
-# Keyboard
+## Keyboard
 export KEYTIMEOUT=1
 
-# Colors (thanks @remi --> https://github.com/remi/dotfiles/blob/master/zsh/config/variables.zsh#L1-L13)
+## Colors (thanks @remi --> https://github.com/remi/dotfiles/blob/master/zsh/config/variables.zsh#L1-L13)
 autoload colors zsh/terminfo
+
+autoload -U select-word-style
+select-word-style bash
+
+bindkey '^H' backward-kill-word
+bindkey '^[[3;5~' kill-word
+bindkey -v
 
 if [[ "$terminfo[colors]" -ge 8 ]]; then
   colors
@@ -58,44 +65,44 @@ export XPR_NO_COLOR="$terminfo[sgr0]"
 # Options
 #
 
-# Append command history instead of overriding it
+## Append command history instead of overriding it
 setopt append_history
 setopt share_history
 
-# Prevent duplicated commands in history
+## Prevent duplicated commands in history
 setopt hist_ignore_dups
 
-# Select first result instead of listing possibilities in the command history
+## Select first result instead of listing possibilities in the command history
 setopt menu_complete
 
-# Evaluate prompt
+## Evaluate prompt
 setopt prompt_subst
 
 #
 # Aliases
 #
 
-# General
+## General
 alias ll="ls -la"
 
-# Ruby
+## Ruby
 alias b="bundle"
 alias be="bundle exec"
 alias rt="RAILS_ENV=test"
 
-# Git
+## Git
 alias g="git"
 alias git="LANG=en_CA git"
 alias clean_branches="git branch --merged master | grep -v \"\* master\" | xargs -n 1 git branch -d"
 
-# Docker
+## Docker
 alias dkc="docker-compose"
 
-# nv
+## nv
 alias nvd="nv .env.dev,.env.dev.local"
 alias nvt="nv .env.test,.env.test.local"
 
-# Vim
+## Vim
 alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
 
 #
@@ -123,6 +130,19 @@ function generate_prompt {
 export PROMPT='$(generate_prompt)'
 
 #
+# [asdf]
+#
+# Version manager
+#
+# Requirements:
+#
+#   - asdf installed via Homebrew --> https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
+#
+
+. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+#
 # [zplug]
 #
 # zsh Plugin manager
@@ -139,18 +159,5 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-syntax-highlighting"
 zplug load
-
-#
-# [asdf]
-#
-# Version manager
-#
-# Requirements:
-#
-#   - asdf installed via Homebrew --> https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
-#
-
-. $(brew --prefix asdf)/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
