@@ -9,6 +9,7 @@ export PATH="$PATH:~/Dropbox/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/bin"
 
+# Terminal
 export TERM=xterm-256color
 
 ## Locales
@@ -123,19 +124,6 @@ function generate_prompt {
 export PROMPT='$(generate_prompt)'
 
 #
-# [asdf]
-#
-# Version manager
-#
-# Requirements:
-#
-#   - asdf installed via Homebrew --> https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
-#
-
-. $(brew --prefix asdf)/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
-
-#
 # [zplug]
 #
 # zsh Plugin manager
@@ -156,10 +144,24 @@ zplug "zsh-users/zsh-syntax-highlighting"
 zplug load
 
 #
+# [asdf]
+#
+# Version manager
+#
+# Requirements:
+#
+#   - asdf installed via Homebrew --> https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
+#
+
+. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+
+#
 # [fzf]
 #
 # Requirements:
 #
 #   - fzf --> https://github.com/junegunn/fzf
 #
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
