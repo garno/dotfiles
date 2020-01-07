@@ -37,6 +37,7 @@ set hidden            " Enable hidden buffers
 set nowrap
 set nofoldenable
 set shell=zsh
+set clipboard=unnamed
 
 " Encoding
 set encoding=utf-8
