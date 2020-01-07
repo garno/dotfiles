@@ -1,0 +1,40 @@
+[user]
+  name = Samuel Garneau
+  email = sam@garno.me
+  signingkey = 38DE1D3C03943C0E
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[core]
+  autocrif = input
+  autocrlf = input
+  excludesfile = /Users/garno/.gitignore
+[alias]
+  a = add
+  st = status
+  pt = push origin --tags
+  ci = commit -v
+  br = branch -vv
+  co = checkout
+  df = diff
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  us = reset HEAD
+  rb = reset --soft HEAD^1
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[push]
+  default = tracking
+[pull]
+  rebase = true
+[commit]
+  gpgsign = true
+[diff]
+  noprefix = true
+[credential]
+  helper = osxkeychain
+[includeIf "gitdir:/Volumes/Mirego/"]
+  path = /Users/garno/.gitconfig-work
