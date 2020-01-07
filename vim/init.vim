@@ -1,3 +1,12 @@
+"
+" From a fresh install, you’ll need to run the following commands in
+" order to get the most out of these configuration files.
+"
+" :PlugInstall
+" :CocInstall coc-elixir
+" :CocInstall coc-tsserver
+"
+
 call plug#begin('~/.config/nvim/plugged')
   " Filetype-specific plugins
   Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }

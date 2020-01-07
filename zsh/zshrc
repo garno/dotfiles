@@ -97,7 +97,8 @@ alias nvd="nv .env.dev,.env.dev.local"
 alias nvt="nv .env.test,.env.test.local"
 
 ## Vim
-alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+alias vi='nvim'
+alias vim='nvim'
 
 #
 # Prompt
