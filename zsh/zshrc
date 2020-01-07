@@ -56,6 +56,12 @@ export PR_NO_COLOR="%{$terminfo[sgr0]%}"
 export XPR_NO_COLOR="$terminfo[sgr0]"
 
 #
+# Bindings
+#
+
+bindkey -e
+
+#
 # Options
 #
 
