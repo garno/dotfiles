@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
 
   " Plugins
+  Plug 'tyrannicaltoucan/vim-deep-space'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'vim-scripts/camelcasemotion'
   Plug 'scrooloose/nerdtree'
