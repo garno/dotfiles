@@ -17,7 +17,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL=$LANG
 
 ## Editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 ## History
 export HISTFILE=$HOME/.zhistory
