@@ -5,7 +5,7 @@
 ## Path
 export PATH="./bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-export PATH="$PATH:~/Dropbox/bin"
+export PATH="$PATH:/Users/garno/Dropbox/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/bin"
 
@@ -67,7 +67,6 @@ bindkey -e
 
 ## Append command history instead of overriding it
 setopt append_history
-setopt share_history
 
 ## Prevent duplicated commands in history
 setopt hist_ignore_dups
