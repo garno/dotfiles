@@ -3,8 +3,10 @@
 " order to get the most out of these configuration files.
 "
 " :PlugInstall
+"
 " :CocInstall coc-elixir
 " :CocInstall coc-tsserver
+" :CocInstall coc-prettier
 "
 
 call plug#begin('~/.config/nvim/plugged')
