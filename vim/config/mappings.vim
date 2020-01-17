@@ -34,6 +34,9 @@ vnoremap > >gv|
 vnoremap <Tab> >gv|
 vnoremap <S-Tab> <gv
 
+" Clear search
+nmap <silent> <Space> :silent noh<Bar>echo<CR>
+
 " Transform DOM into CSS classes
 "
 " Example:
