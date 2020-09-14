@@ -37,6 +37,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mileszs/ack.vim'
   Plug 'zivyangll/git-blame.vim'
   Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
+  Plug 'ruanyl/vim-sort-imports'
 call plug#end()
 
 " Config

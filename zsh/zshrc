@@ -31,6 +31,9 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 export ANDROID_SDK_ROOT="/Users/garno/Library/Android/sdk"
 export ANDROID_HOME="/Users/garno/Library/Android/sdk"
 
+export ANDROID_SDK=$HOME/Library/Android/sdk
+export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
+
 ## Java
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home/
 
