@@ -40,6 +40,8 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
+inoremap <expr> <Tab> pumvisible() ? "<C-n>" : "<Tab>"
+
 nmap <Leader>gd <Plug>(coc-definition)
 nmap <Leader>gh <Plug>(coc-type-definition)
 nmap <Leader>gr <Plug>(coc-references)
