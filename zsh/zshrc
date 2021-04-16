@@ -35,7 +35,7 @@ export ANDROID_SDK=$HOME/Library/Android/sdk
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH
 
 ## Java
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-13.jdk/Contents/Home/
+. ~/.asdf/plugins/java/set-java-home.zsh
 
 ## Keyboard
 export KEYTIMEOUT=1
@@ -161,6 +161,8 @@ zplug load
 #
 #   - asdf installed via Homebrew --> https://asdf-vm.com/#/core-manage-asdf-vm?id=install-asdf-vm
 #
+
+autoload -U +X bashcompinit && bashcompinit
 
 . $(brew --prefix asdf)/asdf.sh
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
