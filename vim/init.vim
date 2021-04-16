@@ -29,7 +29,6 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'EvanDotPro/nerdtree-chmod'
   Plug 'tpope/vim-surround'
-  Plug 'ervandew/supertab'
   Plug 'kien/ctrlp.vim'
   Plug 'rizzatti/dash.vim'
   Plug 'jiangmiao/auto-pairs'
