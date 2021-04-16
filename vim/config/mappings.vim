@@ -53,3 +53,6 @@ nmap <silent> <Space> :silent noh<Bar>echo<CR>
 " .bar {
 " }
 vmap <Leader>c :s/^.* local-class="\(.*\)".*/\.\1\ {\r\}\r/g<CR>
+
+" Remove search highlights
+nnoremap <Leader><space> :noh<cr>
