@@ -1,15 +1,12 @@
 [user]
   name = Samuel Garneau
   email = sam@garno.me
-  signingkey = 38DE1D3C03943C0E
+  signingkey = E83FDBA68788508A
 [color]
   diff = auto
   status = auto
   branch = auto
   interactive = auto
-[branch]
-  autosetupmerge = always
-  autosetuprebase = always
 [core]
   autocrif = input
   autocrlf = input
@@ -31,7 +28,7 @@
 [pull]
   rebase = true
 [commit]
-  gpgsign = true
+ gpgsign = true
 [diff]
   noprefix = true
 [credential]

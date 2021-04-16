@@ -3,6 +3,7 @@
 
 # Elixir
 .exenv-version
+.elixir_ls
 
 # Ruby
 .irb-history
