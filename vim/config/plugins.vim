@@ -15,11 +15,6 @@ sunmap w
 sunmap b
 sunmap e
 
-
-" supertab
-let g:SuperTabDefaultCompletionType = "<c-n>" " scroll down the list
-let g:SuperTabCrMapping = 1 " prevent new line on enter
-
 " ctrlp.vim
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|bower_components\|tmp\|target\|_build$\|deps'
 map <Leader>, :CtrlP<CR>
