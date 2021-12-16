@@ -5,7 +5,7 @@
 ## Path
 export PATH="./bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
-export PATH="$PATH:/Users/garno/Dropbox/bin"
+export PATH="$PATH:/Users/sam/Dropbox/bin"
 export PATH="$PATH:/usr/local/sbin"
 export PATH="$PATH:/usr/local/bin"
 
@@ -28,8 +28,8 @@ export SAVEHIST=1000000
 export ERL_AFLAGS="-kernel shell_history enabled"
 
 ## Android SDK
-export ANDROID_SDK_ROOT="/Users/garno/Library/Android/sdk"
-export ANDROID_HOME="/Users/garno/Library/Android/sdk"
+export ANDROID_SDK_ROOT="/Users/sam/Library/Android/sdk"
+export ANDROID_HOME="/Users/sam/Library/Android/sdk"
 
 export ANDROID_SDK=$HOME/Library/Android/sdk
 export PATH=$ANDROID_SDK/emulator:$ANDROID_SDK/tools:$PATH

@@ -10,7 +10,7 @@
 [core]
   autocrif = input
   autocrlf = input
-  excludesfile = /Users/garno/.gitignore
+  excludesfile = /Users/sam/.gitignore
 [alias]
   a = add
   st = status
@@ -34,6 +34,6 @@
 [credential]
   helper = osxkeychain
 [includeIf "gitdir:/Volumes/Mirego/"]
-  path = /Users/garno/.gitconfig-work
+  path = /Users/sam/.gitconfig-work
 [gpg]
   program = gpg
