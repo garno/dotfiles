@@ -35,3 +35,5 @@
   helper = osxkeychain
 [includeIf "gitdir:/Volumes/Mirego/"]
   path = /Users/garno/.gitconfig-work
+[gpg]
+  program = gpg
