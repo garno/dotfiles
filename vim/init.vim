@@ -7,6 +7,10 @@
 " :CocInstall coc-elixir
 " :CocInstall coc-tsserver
 " :CocInstall coc-prettier
+" :CocInstall coc-tailwindcss
+" :CocInstall coc-css
+" :CocInstall coc-stylelint
+" :CocInstall coc-ember
 "
 
 call plug#begin('~/.config/nvim/plugged')
@@ -37,6 +41,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'zivyangll/git-blame.vim'
   Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
   Plug 'ruanyl/vim-sort-imports'
+  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 call plug#end()
 
 " Config

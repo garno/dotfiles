@@ -12,3 +12,6 @@ autocmd BufNewFile,BufRead *.{coffee} setfiletype coffeescript
 
 " GraphQL
 autocmd BufNewFile,BufRead *.{graphql} setfiletype graphql
+
+" SCSS
+autocmd FileType scss setl iskeyword+=@-@

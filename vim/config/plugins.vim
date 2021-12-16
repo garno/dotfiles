@@ -40,3 +40,5 @@ inoremap <expr> <Tab> pumvisible() ? "<C-n>" : "<Tab>"
 nmap <Leader>gd <Plug>(coc-definition)
 nmap <Leader>gh <Plug>(coc-type-definition)
 nmap <Leader>gr <Plug>(coc-references)
+
+let g:prettier#autoformat = 1

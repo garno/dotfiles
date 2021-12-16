@@ -7,5 +7,6 @@
   "diagnostic-languageserver.formatFiletypes": {
     "elixir": "mix_format",
     "eelixir": "mix_format"
-  }
+  },
+  "elixirLS.mixEnv": "dev"
 }
