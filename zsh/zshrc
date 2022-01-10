@@ -141,11 +141,10 @@ export PROMPT='$(generate_prompt)'
 #
 #   - zplug --> https://github.com/zplug/zplug#manually
 #
-# > export ZPLUG_HOME=/usr/local/opt/zplug
-# > git clone https://github.com/zplug/zplug $ZPLUG_HOME
+# > brew install zplug
 #
 
-export ZPLUG_HOME=/usr/local/opt/zplug
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 zplug "zsh-users/zsh-autosuggestions"
