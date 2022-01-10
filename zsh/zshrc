@@ -2,6 +2,9 @@
 # Global variables
 #
 
+## GPG TTY
+export GPG_TTY=$(tty)
+
 ## Path
 export PATH="./bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
