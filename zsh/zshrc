@@ -90,6 +90,9 @@ setopt prompt_subst
 ## General
 alias ll="ls -la"
 
+## Bat
+alias cat="bat"
+
 ## Ruby
 alias b="bundle"
 alias be="bundle exec"
