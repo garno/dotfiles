@@ -1,17 +1,3 @@
-" Handlebars
-autocmd BufNewFile,BufRead *.{handlebars,hb,hbs,hbt} setfiletype html
-
-" ES6
-autocmd BufNewFile,BufRead *.{es6} setfiletype javascript
-
-" Slim
-autocmd BufNewFile,BufRead *.{slim} setfiletype slim
-
-" Coffeescript
-autocmd BufNewFile,BufRead *.{coffee} setfiletype coffeescript
-
-" GraphQL
-autocmd BufNewFile,BufRead *.{graphql} setfiletype graphql
-
-" SCSS
-autocmd FileType scss setl iskeyword+=@-@
+" Environment files
+autocmd BufRead,BufNewFile .env setfiletype sh
+autocmd BufRead,BufNewFile .env.* setfiletype sh

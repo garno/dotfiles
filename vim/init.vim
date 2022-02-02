@@ -14,34 +14,20 @@
 "
 
 call plug#begin('~/.config/nvim/plugged')
-  " Filetype-specific plugins
-  Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
-  Plug 'hail2u/vim-css3-syntax', { 'for': ['css', 'scss'] }
-  Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
-  Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
-  Plug 'mustache/vim-mustache-handlebars', { 'for': ['html.handlebars'] }
-  Plug 'othree/html5.vim', { 'for': ['html', 'eruby', 'html.handlebars', 'handlebars'] }
-  Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx', 'typescript'] }
-  Plug 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
-  Plug 'leafgarland/typescript-vim', { 'for': ['typescript']}
-  Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
-
   " Plugins
-  Plug 'tyrannicaltoucan/vim-deep-space'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'vim-scripts/camelcasemotion'
-  Plug 'scrooloose/nerdtree'
   Plug 'EvanDotPro/nerdtree-chmod'
-  Plug 'tpope/vim-surround'
-  Plug 'kien/ctrlp.vim'
-  Plug 'rizzatti/dash.vim'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'tpope/vim-commentary'
+  Plug 'kien/ctrlp.vim'
+  Plug 'mhinz/vim-signify'
   Plug 'mileszs/ack.vim'
-  Plug 'zivyangll/git-blame.vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'scrooloose/nerdtree'
+  Plug 'sheerun/vim-polyglot'
+  Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-endwise', { 'for': ['ruby', 'elixir'] }
-  Plug 'ruanyl/vim-sort-imports'
-  Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+  Plug 'tyrannicaltoucan/vim-deep-space'
+  Plug 'vim-scripts/camelcasemotion'
+  Plug 'zivyangll/git-blame.vim'
 call plug#end()
 
 " Config

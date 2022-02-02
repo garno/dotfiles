@@ -1,7 +1,7 @@
 " NERDTree
 let NERDTreeShowHidden = 1
 let NERDTreeShowLineNumbers = 1
-let NERDTreeIgnore = ['\.DS_Store$', '\.swo$', '\.swp$', '\.git$', '\.bower-*', 'bower_components', 'node_modules', 'deps', '_build$']
+let NERDTreeIgnore = ['\.DS_Store$', '\.swo$', '\.swp$']
 let NERDTreeMapActivateNode='l'
 let NERDTreeDirArrowExpandable='›'
 let NERDTreeDirArrowCollapsible='-'
@@ -16,13 +16,10 @@ sunmap b
 sunmap e
 
 " ctrlp.vim
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|bower_components\|tmp\|target\|_build$\|deps'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git\|tmp\|target\|^_build$\|deps'
 map <Leader>, :CtrlP<CR>
 map <Leader>b :CtrlPBuffer<CR>
 map <Leader>o :CtrlP %:p:h<CR>
-
-" dash.vim
-map <Leader>d :Dash<CR>
 
 " ack.vim
 command! -nargs=* -complete=file Ag Ack <args>
@@ -35,10 +32,12 @@ set cmdheight=2
 set updatetime=300
 set shortmess+=c
 
-inoremap <expr> <Tab> pumvisible() ? "<C-n>" : "<Tab>"
-
+" coc.vim quick navigation
 nmap <Leader>gd <Plug>(coc-definition)
 nmap <Leader>gh <Plug>(coc-type-definition)
 nmap <Leader>gr <Plug>(coc-references)
 
+inoremap <expr> <Tab> pumvisible() ? "<C-n>" : "<Tab>"
+
+" prettier.vim
 let g:prettier#autoformat = 1
