@@ -1,5 +1,12 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["elixir", "css", "typescript", "javascript", "json"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "elixir",
+    "scss",
+    "css",
+    "typescript",
+    "javascript",
+    "json"
+  ],
   "diagnostic-languageserver.filetypes": {
     "elixir": ["mix_credo"],
     "eelixir": ["mix_credo"]
