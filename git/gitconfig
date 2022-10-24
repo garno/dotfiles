@@ -1,7 +1,7 @@
 [user]
   name = Samuel Garneau
   email = sam@garno.me
-  signingkey = E49E32A618205F0B
+  signinkey = E49E32A618205F0B
 [color]
   diff = auto
   status = auto
