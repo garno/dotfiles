@@ -90,6 +90,9 @@ setopt prompt_subst
 ## General
 alias ll="ls -la"
 
+## Kubernetes
+alias k="kubectl"
+
 ## Bat
 alias cat="bat"
 
@@ -169,7 +172,7 @@ zplug load
 
 autoload -U +X bashcompinit && bashcompinit
 
-. $(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/libexec/asdf.sh
 . $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
 
 #
@@ -181,3 +184,21 @@ autoload -U +X bashcompinit && bashcompinit
 #
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source /Users/sam/.docker/init-zsh.sh || true # Added by Docker Desktop
+
+#
+# git main branch
+#
+
+function git_main_branch() {
+  command git rev-parse --git-dir &>/dev/null || return
+  local ref
+  for ref in refs/{heads,remotes/{origin,upstream}}/{main,trunk,mainline,default}; do
+    if command git show-ref -q --verify $ref; then
+      echo ${ref:t}
+      return
+    fi
+  done
+  echo master
+}

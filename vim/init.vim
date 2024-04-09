@@ -15,6 +15,7 @@
 
 call plug#begin('~/.config/nvim/plugged')
   " Plugins
+  Plug 'github/copilot.vim'
   Plug 'EvanDotPro/nerdtree-chmod'
   Plug 'jiangmiao/auto-pairs'
   Plug 'kien/ctrlp.vim'
@@ -28,6 +29,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'tyrannicaltoucan/vim-deep-space'
   Plug 'vim-scripts/camelcasemotion'
   Plug 'zivyangll/git-blame.vim'
+  Plug 'elixir-editors/vim-elixir'
 call plug#end()
 
 " Config

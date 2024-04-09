@@ -41,8 +41,8 @@ nmap <silent> <Space> :silent noh<Bar>echo<CR>
 "
 " Example:
 "
-" <div local-class="foo">
-"   <span local-class="bar">Hello</span>
+" <div class="foo">
+"   <span class="bar">Hello</span>
 " </div>
 "
 " Turns into
@@ -52,7 +52,13 @@ nmap <silent> <Space> :silent noh<Bar>echo<CR>
 "
 " .bar {
 " }
-vmap <Leader>c :s/^.* local-class="\(.*\)".*/\.\1\ {\r\}\r/g<CR>
+vmap <Leader>c :s/^.* class="\(.*\)".*/\.\1\ {\r\}\r/g<CR>
 
 " Remove search highlights
 nnoremap <Leader><space> :noh<cr>
+
+" COC
+" verbose imap <tab>
+
+        imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+        let g:copilot_no_tab_map = v:true

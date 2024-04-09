@@ -19,7 +19,7 @@ set backupdir=$HOME/.vim-local/.vimbackup
 set directory=$HOME/.vim-local/.vimswap
 
 " General settings
-let mapleader=","
+let mapleader=","                                                           " [X]
 set showcmd           " Display command
 set showmode          " Display the current mode
 set ignorecase        " Ignore case on search
