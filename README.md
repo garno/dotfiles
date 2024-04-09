@@ -23,7 +23,7 @@ ln -s /path/to/dotfiles/nv/nv ~/.nv
 ### nvim
 
 ```
-ln -s /path/to/dotfiles/vim ~/.config/nvim
+ln -s /path/to/dotfiles/nvim ~/.config/nvim
 ```
 
 ### tmux
