@@ -17,5 +17,5 @@
     "elixir": "mix_format",
     "eelixir": "mix_format"
   },
-  "elixir.pathToElixirLS": "/opt/homebrew/Cellar/elixir-ls/0.18.1/bin/elixir-ls"
+  "elixir.pathToElixirLS": "/opt/homebrew/Cellar/elixir-ls/0.20.0/bin/elixir-ls"
 }
