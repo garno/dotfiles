@@ -3,8 +3,17 @@ return {
 	tag = "0.1.5",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	config = function()
+		require("telescope").setup({
+			defaults = {
+				mappings = {
+					i = {
+						["<esc>"] = require("telescope.actions").close,
+					},
+				},
+			},
+		})
+
 		local builtin = require("telescope.builtin")
-		local utils = require("telescope.utils")
 
 		vim.keymap.set("n", "<leader>,", builtin.find_files, {})
 		vim.keymap.set("n", "<leader>o", function()
@@ -13,6 +22,8 @@ return {
 			})
 		end, {})
 		vim.keymap.set("n", "<leader>s", builtin.live_grep, {})
-		vim.keymap.set("n", "<leader>b", builtin.buffers, {})
+		vim.keymap.set("n", "<leader>b", function()
+			require("telescope.builtin").buffers({ sort_lastused = true, ignore_current_buffer = true })
+		end, {})
 	end,
 }
