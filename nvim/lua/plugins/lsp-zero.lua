@@ -12,7 +12,6 @@ return {
 
 		lsp.on_attach(function(_, bufnr)
 			lsp.default_keymaps({ buffer = bufnr })
-			lsp.buffer_autoformat()
 
 			vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", { buffer = bufnr })
 		end)
