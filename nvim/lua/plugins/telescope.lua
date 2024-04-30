@@ -5,6 +5,8 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
+				file_ignore_patterns = { "node_modules" },
+
 				mappings = {
 					i = {
 						["<esc>"] = require("telescope.actions").close,
