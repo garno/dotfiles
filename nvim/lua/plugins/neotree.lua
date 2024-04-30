@@ -12,12 +12,15 @@ return {
 		require("neo-tree").setup({
 			window = {
 				width = 45,
-				mappings = { ["l"] = "open" },
+				mappings = {
+					["l"] = "open",
+					["S"] = "fuzzy_finder",
+				},
 			},
 
 			filesystem = {
 				follow_current_file = {
-					enabled = true,
+					enabled = false,
 				},
 				filtered_items = {
 					hide_dotfiles = false,
