@@ -10,8 +10,13 @@ return {
 		["*"] = { "codespell" },
 
 		format_on_save = {
-			timeout_ms = 500,
+			async = true,
+			timeout_ms = 2500,
 			lsp_fallback = true,
+		},
+
+		formatters = {
+			injected = { options = { ignore_errors = true } },
 		},
 	},
 }
