@@ -5,6 +5,7 @@ return {
 			lua = { "stylua" },
 			elixir = { "mix" },
 			typescript = { "prettier" },
+			json = { "jq" },
 		},
 
 		["*"] = { "codespell" },
