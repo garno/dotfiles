@@ -26,6 +26,9 @@ require("filetypes")
 -- base mappings
 require("mappings")
 
+-- functions
+require("functions")
+
 -- languages
 require("languages.elixir")
 require("languages.typescript")
