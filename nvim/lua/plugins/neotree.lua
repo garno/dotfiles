@@ -15,6 +15,8 @@ return {
 				mappings = {
 					["l"] = "open",
 					["S"] = "fuzzy_finder",
+					["i"] = "open_split",
+					["/"] = "", -- i like to use the regular search pattern
 				},
 			},
 
