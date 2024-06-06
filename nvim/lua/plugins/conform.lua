@@ -2,14 +2,13 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		formatters_by_ft = {
-			lua = { "stylua" },
 			elixir = { "mix" },
-			typescript = { "prettier" },
 			json = { "jq" },
+			lua = { "stylua" },
+			ruby = { "rubocop" },
+			typescript = { "prettier" },
 			yaml = { "prettier" },
 		},
-
-		["*"] = { "codespell" },
 
 		format_on_save = function(buffer)
 			if vim.g.disable_autoformat or vim.b[buffer].disable_autoformat then
