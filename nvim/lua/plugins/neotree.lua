@@ -21,6 +21,7 @@ return {
 			},
 
 			filesystem = {
+				get_git_status = false,
 				follow_current_file = {
 					enabled = false,
 				},
