@@ -8,6 +8,14 @@ return {
 			build = ":TSUpdate",
 			event = { "BufRead", "BufNewFile" },
 
+			ensure_installed = {
+				"eex",
+				"elixir",
+				"erlang",
+				"heex",
+				"html",
+			},
+
 			highlight = {
 				enable = true,
 				additional_vim_regex_highlighting = false,
