@@ -22,9 +22,23 @@ return {
 
 			filesystem = {
 				get_git_status = false,
+				use_libuv_file_watcher = false,
+
+				renderers = {
+					file = {
+						{ "icon" },
+						{ "name", use_git_status_colors = false },
+					},
+					directory = {
+						{ "icon" },
+						{ "name", use_git_status_colors = false },
+					},
+				},
+
 				follow_current_file = {
 					enabled = false,
 				},
+
 				filtered_items = {
 					hide_dotfiles = false,
 					hide_gitignored = false,
