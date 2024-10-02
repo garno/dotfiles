@@ -7,7 +7,7 @@ return {
 		mode = "float",
 		prompts = {
 			Explain = {
-				prompt = "/COPILOT_EXPLAIN Write a explanation for the code above as paragraphs of text.",
+				prompt = "/COPILOT_EXPLAIN Write a explanation for the active selection as paragraphs of text.",
 				mapping = "<leader>ie",
 			},
 			Tests = {

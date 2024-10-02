@@ -27,5 +27,11 @@ return {
 		vim.keymap.set("n", "<leader>b", function()
 			require("telescope.builtin").buffers({ sort_lastused = true, ignore_current_buffer = true })
 		end, {})
+		vim.keymap.set("n", "<leader>ca", function()
+			require("CopilotChat.integrations.telescope").pick(require("CopilotChat.actions").prompt_actions())
+		end, {})
+		vim.keymap.set("v", "<leader>ca", function()
+			require("CopilotChat.integrations.telescope").pick(require("CopilotChat.actions").prompt_actions())
+		end, {})
 	end,
 }
