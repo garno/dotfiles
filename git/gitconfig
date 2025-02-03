@@ -1,16 +1,15 @@
 [user]
   name = Samuel Garneau
   email = sam@garno.me
-  signinkey = 2D758BF5DAA9E780
+  signinkey = 6273A87B3E30F799
 [color]
   diff = auto
   status = auto
   branch = auto
   interactive = auto
 [core]
-  autocrif = input
-  autocrlf = input
   excludesfile = /Users/sam/.gitignore
+  whitespace = cr-at-eol
 [alias]
   a = add
   st = status
