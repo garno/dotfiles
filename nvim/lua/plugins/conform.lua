@@ -3,14 +3,15 @@ return {
 	opts = {
 		formatters_by_ft = {
 			elixir = { "mix" },
-			json = { "jq" },
+			json = { "prettier" },
 			lua = { "stylua" },
 			ruby = { "rubocop" },
 			typescript = { "prettier" },
 			yaml = { "prettier" },
+			vue = { "prettier" },
 		},
 
-		format_on_save = function(buffer)
+		format_after_save = function(buffer)
 			if vim.g.disable_autoformat or vim.b[buffer].disable_autoformat then
 				return
 			end

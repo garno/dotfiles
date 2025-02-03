@@ -1,3 +1,8 @@
 require("lspconfig").elixirls.setup({
-	cmd = { "/Users/sam/.elixir-ls/release/language_server.sh" },
+	cmd = { "/opt/homebrew/bin/elixir-ls" },
+	elixirLS = {
+		mixEnv = "dev",
+		logLevel = "debug",
+		fetchDeps = true,
+	},
 })

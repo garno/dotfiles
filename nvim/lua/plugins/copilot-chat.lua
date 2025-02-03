@@ -33,6 +33,8 @@ return {
 			layout = "float",
 			title = "Copilot Chat",
 			zindex = 1,
+			width = 150, -- fractional width of parent, or absolute width in columns when > 1
+			height = 40,
 		},
 	},
 	build = function()
