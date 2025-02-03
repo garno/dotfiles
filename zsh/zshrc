@@ -204,5 +204,9 @@ function git_main_branch() {
   echo master
 }
 
-# Pipenv
+# pipenv
 eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
+
+# atuinsh
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh --disable-up-arrow)"
